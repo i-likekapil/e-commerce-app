@@ -18,4 +18,9 @@ export class ApiService {
     const users = await this.userModel.find();
     return users;
   }
+
+  async createUser(user: User): Promise<User> {
+    const res = this.userModel.create(user);
+    return res;
+  }
 }
